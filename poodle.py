@@ -13,14 +13,8 @@ class Poodle:
         if type(mate) == Poodle:
             if mate.gender != self.gender:
                 if randint(0, 1):
-                    if randint(0, 1):
-                        gender = 'female'
-                    else:
-                        gender = 'male'
-                    if randint(0, 1):
-                        colour = self.colour
-                    else:
-                        colour = mate.colour
+                    gender = 'female' if randint(0, 1) else 'male'
+                    colour = self.colour if randint(0, 1) else mate.colour
                     name = 'abcdefghijklmnopqrstuvwxyz'[randint(0, 25)]
                     return Poodle(name, gender, colour)
                 else:

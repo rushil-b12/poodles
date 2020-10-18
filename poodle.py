@@ -1,4 +1,5 @@
 from random import randint
+from namegen import generate_name
 
 class Poodle:
     def __init__(self, name, gender, colour):
@@ -15,7 +16,8 @@ class Poodle:
                 if randint(0, 1):
                     gender = 'female' if randint(0, 1) else 'male'
                     colour = self.colour if randint(0, 1) else mate.colour
-                    name = 'abcdefghijklmnopqrstuvwxyz'[randint(0, 25)]
+                    m, f = generate_name()
+                    name = m if gender == 'male' else f
                     return Poodle(name, gender, colour)
                 else:
                     return None

@@ -10,7 +10,7 @@ doghouse = Kennel(2, [matriarch], [patriarch])
 print(doghouse)
 
 for i in range(15):
-    sleep(randint(2, 2))
+    sleep(randint(2, 5))
     doghouse.grow()
     print('')
 

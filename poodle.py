@@ -39,5 +39,6 @@ class Poodle:
             raise TypeError('Argument must be a Poodle object.')
 
 if __name__ == '__main__':
-    a = Poodle(gender='male', colour='hazel')
-    print(a)
+    a = Poodle(gender='male')
+    b= Poodle(gender='female')
+    print(a.couple(b))
